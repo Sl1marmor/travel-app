@@ -14,7 +14,9 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 /* ─────────────────────────────────────────────────────────
    API
 ───────────────────────────────────────────────────────── */
-const API = "http://localhost:4000/api";
+const API = process.env.NODE_ENV === "production"
+  ? "https://travel-app-f9xf.onrender.com/api"
+  : "http://localhost:4000/api";
 
 // Зберігаємо JWT токен між запитами
 const token = { value: localStorage.getItem("token") || null };
