@@ -23,7 +23,12 @@ const app  = express();
 const PORT = process.env.PORT || 4000;
 
 /* ── Middleware ── */
-app.use(cors({ origin: "http://localhost:3000" })); // дозволяємо запити з React
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://travel-app-client-gamma.vercel.app"
+  ]
+}));
 app.use(express.json());
 
 /* ── Маршрути ── */
