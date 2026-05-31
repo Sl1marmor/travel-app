@@ -7,12 +7,9 @@ const { Pool } = require("pg");
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  // або можна вказати окремо:
-  // host:     process.env.DB_HOST     || "localhost",
-  // port:     process.env.DB_PORT     || 5432,
-  // database: process.env.DB_NAME     || "travel_app",
-  // user:     process.env.DB_USER     || "postgres",
-  // password: process.env.DB_PASSWORD || "password",
+  ssl: process.env.DATABASE_URL.includes("render.com")
+    ? { rejectUnauthorized: false }
+    : false,
 });
 
 // Перевірка підключення при старті
