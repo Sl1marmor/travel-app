@@ -73,9 +73,9 @@ input, select { font-family: inherit; border: none; outline: none; background: n
 
 /* ── TABS ── */
 .s-tabs { display: flex; gap: 4px; margin-bottom: 0; flex-wrap: wrap; }
-.s-tab { padding: 10px 20px; border-radius: 10px 10px 0 0; font-size: 14px; font-weight: 500; color: rgba(255,255,255,.55); transition: all .2s; }
+.s-tab { padding: 10px 20px; border-radius: 10px 10px 0 0; font-size: 14px; font-weight: 600; color: rgba(255,255,255,.55); transition: all .2s; white-space: nowrap; }
 .s-tab:hover { color: #fff; background: rgba(255,255,255,.07); }
-.s-tab.active { background: #fff; color: #111827; font-weight: 600; }
+.s-tab.active { background: #fff; color: #111827; }
 
 /* ── SEARCH BOX ── */
 .s-search { display: flex; align-items: stretch; background: #fff; border-radius: 0 16px 16px 16px; box-shadow: var(--sh-lg); max-width: 940px; overflow: visible; position: relative; }
